@@ -1,0 +1,615 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+  <meta charset="UTF-8" />\
+  <title>Fair Roads San Mateo \'96 Driver Transparency Project</title>\
+  <meta name="viewport" content="width=device-width, initial-scale=1" />\
+  <style>\
+    /* Base styles */\
+    * \{\
+      box-sizing: border-box;\
+      margin: 0;\
+      padding: 0;\
+    \}\
+\
+    body \{\
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;\
+      background-color: #050505;\
+      color: #f5f5f5;\
+      line-height: 1.6;\
+    \}\
+\
+    a \{\
+      color: #f8d34a;\
+      text-decoration: none;\
+    \}\
+\
+    a:hover \{\
+      text-decoration: underline;\
+    \}\
+\
+    /* Layout */\
+    header, main, footer \{\
+      width: 100%;\
+    \}\
+\
+    .container \{\
+      max-width: 1100px;\
+      margin: 0 auto;\
+      padding: 1.5rem;\
+    \}\
+\
+    /* Navbar */\
+    .nav \{\
+      display: flex;\
+      justify-content: space-between;\
+      align-items: center;\
+      padding: 1rem 1.5rem;\
+      border-bottom: 1px solid #222;\
+      background: rgba(0, 0, 0, 0.8);\
+      position: sticky;\
+      top: 0;\
+      z-index: 10;\
+      backdrop-filter: blur(10px);\
+    \}\
+\
+    .nav-logo \{\
+      font-weight: 700;\
+      letter-spacing: 0.08em;\
+      text-transform: uppercase;\
+      font-size: 0.9rem;\
+      color: #f8d34a;\
+    \}\
+\
+    .nav-links \{\
+      display: flex;\
+      gap: 1rem;\
+      font-size: 0.9rem;\
+    \}\
+\
+    .nav-links a \{\
+      text-transform: uppercase;\
+      letter-spacing: 0.1em;\
+      font-size: 0.75rem;\
+    \}\
+\
+    /* Hero */\
+    .hero \{\
+      padding: 4rem 1.5rem 3rem;\
+      background: radial-gradient(circle at top, #f8d34a22 0, #050505 55%);\
+      border-bottom: 1px solid #222;\
+    \}\
+\
+    .hero-inner \{\
+      max-width: 1100px;\
+      margin: 0 auto;\
+      display: grid;\
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);\
+      gap: 2.5rem;\
+      align-items: center;\
+    \}\
+\
+    .hero-tag \{\
+      text-transform: uppercase;\
+      letter-spacing: 0.25em;\
+      font-size: 0.7rem;\
+      color: #f8d34a;\
+      margin-bottom: 0.75rem;\
+    \}\
+\
+    .hero-title \{\
+      font-size: 2.4rem;\
+      line-height: 1.1;\
+      margin-bottom: 1rem;\
+    \}\
+\
+    .hero-title span \{\
+      color: #f8d34a;\
+    \}\
+\
+    .hero-subtitle \{\
+      font-size: 0.95rem;\
+      max-width: 32rem;\
+      color: #d3d3d3;\
+      margin-bottom: 1.5rem;\
+    \}\
+\
+    .hero-buttons \{\
+      display: flex;\
+      flex-wrap: wrap;\
+      gap: 0.75rem;\
+    \}\
+\
+    .btn \{\
+      display: inline-block;\
+      padding: 0.75rem 1.4rem;\
+      border-radius: 999px;\
+      font-size: 0.85rem;\
+      text-transform: uppercase;\
+      letter-spacing: 0.14em;\
+      border: 1px solid #f8d34a;\
+      background: transparent;\
+      color: #f8d34a;\
+      cursor: pointer;\
+      transition: all 0.18s ease-out;\
+    \}\
+\
+    .btn.solid \{\
+      background: linear-gradient(135deg, #f8d34a, #e6b800);\
+      border-color: transparent;\
+      color: #050505;\
+      font-weight: 600;\
+    \}\
+\
+    .btn.solid:hover \{\
+      filter: brightness(1.05);\
+      transform: translateY(-1px);\
+    \}\
+\
+    .btn:hover \{\
+      background-color: #f8d34a11;\
+    \}\
+\
+    .hero-card \{\
+      border-radius: 1.25rem;\
+      border: 1px solid #333;\
+      padding: 1.5rem;\
+      background: radial-gradient(circle at top left, #f8d34a18 0, #050505 55%);\
+    \}\
+\
+    .hero-stat-label \{\
+      font-size: 0.7rem;\
+      text-transform: uppercase;\
+      color: #b3b3b3;\
+      letter-spacing: 0.16em;\
+      margin-bottom: 0.25rem;\
+    \}\
+\
+    .hero-stat-value \{\
+      font-size: 2.4rem;\
+      font-weight: 700;\
+      color: #f8d34a;\
+      margin-bottom: 0.5rem;\
+    \}\
+\
+    .hero-stat-caption \{\
+      font-size: 0.8rem;\
+      color: #d0d0d0;\
+      margin-bottom: 1rem;\
+    \}\
+\
+    .hero-badge \{\
+      font-size: 0.7rem;\
+      border-radius: 999px;\
+      border: 1px solid #444;\
+      padding: 0.4rem 0.7rem;\
+      display: inline-flex;\
+      align-items: center;\
+      gap: 0.4rem;\
+      color: #c7c7c7;\
+    \}\
+\
+    .hero-dot \{\
+      width: 6px;\
+      height: 6px;\
+      border-radius: 999px;\
+      background-color: #4ade80;\
+    \}\
+\
+    /* Sections */\
+    section \{\
+      padding: 3rem 1.5rem;\
+      border-bottom: 1px solid #161616;\
+    \}\
+\
+    .section-header \{\
+      max-width: 1100px;\
+      margin: 0 auto 1.5rem;\
+      display: flex;\
+      justify-content: space-between;\
+      align-items: baseline;\
+      gap: 1rem;\
+    \}\
+\
+    .section-title \{\
+      font-size: 1.4rem;\
+    \}\
+\
+    .section-kicker \{\
+      text-transform: uppercase;\
+      letter-spacing: 0.18em;\
+      font-size: 0.7rem;\
+      color: #b3b3b3;\
+      margin-bottom: 0.35rem;\
+    \}\
+\
+    .section-subtitle \{\
+      font-size: 0.9rem;\
+      color: #d0d0d0;\
+      max-width: 32rem;\
+    \}\
+\
+    /* Grids & cards */\
+    .grid-2 \{\
+      max-width: 1100px;\
+      margin: 0 auto;\
+      display: grid;\
+      gap: 1.75rem;\
+      grid-template-columns: repeat(2, minmax(0, 1fr));\
+    \}\
+\
+    .card \{\
+      border-radius: 1rem;\
+      border: 1px solid #292929;\
+      padding: 1.5rem;\
+      background: #080808;\
+    \}\
+\
+    .card h3 \{\
+      font-size: 1rem;\
+      margin-bottom: 0.4rem;\
+    \}\
+\
+    .card p \{\
+      font-size: 0.88rem;\
+      color: #d3d3d3;\
+    \}\
+\
+    .pill \{\
+      display: inline-block;\
+      padding: 0.25rem 0.7rem;\
+      border-radius: 999px;\
+      border: 1px solid #333;\
+      font-size: 0.7rem;\
+      text-transform: uppercase;\
+      letter-spacing: 0.16em;\
+      color: #bfbfbf;\
+      margin-bottom: 0.6rem;\
+    \}\
+\
+    ul \{\
+      list-style: none;\
+      padding-left: 1rem;\
+    \}\
+\
+    ul li \{\
+      position: relative;\
+      margin-bottom: 0.4rem;\
+      font-size: 0.9rem;\
+      color: #d3d3d3;\
+    \}\
+\
+    ul li::before \{\
+      content: "\'96";\
+      position: absolute;\
+      left: -0.7rem;\
+      color: #f8d34a;\
+    \}\
+\
+    .highlight \{\
+      color: #f8d34a;\
+      font-weight: 500;\
+    \}\
+\
+    /* Resources & call-to-action */\
+    .resource-list a \{\
+      display: inline-flex;\
+      align-items: center;\
+      gap: 0.35rem;\
+      font-size: 0.86rem;\
+      margin-bottom: 0.35rem;\
+    \}\
+\
+    .resource-list a::before \{\
+      content: "\uc0\u8599 ";\
+      font-size: 0.7rem;\
+      color: #f8d34a;\
+    \}\
+\
+    .action-steps ol \{\
+      padding-left: 1.2rem;\
+      font-size: 0.9rem;\
+      color: #d3d3d3;\
+    \}\
+\
+    .action-steps li \{\
+      margin-bottom: 0.55rem;\
+    \}\
+\
+    /* Footer */\
+    footer \{\
+      padding: 2rem 1.5rem 2.5rem;\
+      background: #050505;\
+    \}\
+\
+    .footer-inner \{\
+      max-width: 1100px;\
+      margin: 0 auto;\
+      display: flex;\
+      flex-wrap: wrap;\
+      align-items: baseline;\
+      justify-content: space-between;\
+      gap: 1.5rem;\
+      border-top: 1px solid #161616;\
+      padding-top: 1.5rem;\
+      font-size: 0.8rem;\
+      color: #a0a0a0;\
+    \}\
+\
+    .footer-brand \{\
+      text-transform: uppercase;\
+      letter-spacing: 0.18em;\
+      font-size: 0.7rem;\
+      color: #f8d34a;\
+    \}\
+\
+    .footer-links \{\
+      display: flex;\
+      gap: 1rem;\
+      font-size: 0.8rem;\
+    \}\
+\
+    /* Responsive */\
+    @media (max-width: 800px) \{\
+      .hero-inner \{\
+        grid-template-columns: minmax(0, 1fr);\
+      \}\
+\
+      .grid-2 \{\
+        grid-template-columns: minmax(0, 1fr);\
+      \}\
+\
+      .nav-links \{\
+        display: none;\
+      \}\
+\
+      .hero \{\
+        padding-top: 3rem;\
+      \}\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <!-- Navbar -->\
+  <header class="nav">\
+    <div class="nav-logo">Fair Roads // San Mateo</div>\
+    <nav class="nav-links">\
+      <a href="#issue">Issue</a>\
+      <a href="#rights">Know Your Rights</a>\
+      <a href="#action">Take Action</a>\
+      <a href="#resources">Resources</a>\
+    </nav>\
+  </header>\
+\
+  <!-- Hero -->\
+  <section class="hero">\
+    <div class="hero-inner">\
+      <div>\
+        <div class="hero-tag">San Mateo County \'95 Young Drivers</div>\
+        <h1 class="hero-title">\
+          <span>Fair roads,</span><br />\
+          clear rules, real transparency.\
+        </h1>\
+        <p class="hero-subtitle">\
+          This project shines a light on how vehicle laws\'97like tint, emissions, and modifications\'97\
+          are enforced unevenly across San Mateo County, and what young drivers can do about it.\
+        </p>\
+        <div class="hero-buttons">\
+          <a href="#issue" class="btn solid">Learn the issue</a>\
+          <a href="#action" class="btn">Join the push for change</a>\
+        </div>\
+      </div>\
+\
+      <aside class="hero-card">\
+        <div class="hero-stat-label">For young drivers</div>\
+        <div class="hero-stat-value">1&nbsp;County</div>\
+        <div class="hero-stat-caption">\
+          One set of vehicle laws. Many different ways they\'92re enforced. Let\'92s make it more consistent and transparent.\
+        </div>\
+        <div class="hero-badge">\
+          <span class="hero-dot"></span>\
+          Awareness \'95 Advocacy \'95 Policy\
+        </div>\
+      </aside>\
+    </div>\
+  </section>\
+\
+  <!-- The Issue -->\
+  <section id="issue">\
+    <div class="section-header">\
+      <div>\
+        <div class="section-kicker">The Issue</div>\
+        <h2 class="section-title">Inconsistent enforcement hits young drivers hardest.</h2>\
+      </div>\
+      <p class="section-subtitle">\
+        Same state laws. Different streets. Tickets and warnings can depend on which city you\'92re in, how an officer interprets\
+        a rule, or how much information you were given in the first place.\
+      </p>\
+    </div>\
+\
+    <div class="grid-2 container">\
+      <div class="card">\
+        <div class="pill">What\'92s happening</div>\
+        <h3>Same car, different outcome.</h3>\
+        <p>\
+          In California, vehicle regulations like <span class="highlight">window tint limits, exhaust noise, and emissions</span>\
+          are governed by state law. But the way those laws are enforced can change between agencies and cities inside San Mateo County.\
+          One driver might get a warning, while another gets a ticket for the same thing.\
+        </p>\
+        <br />\
+        <p>\
+          That inconsistency creates confusion, especially for new drivers trying to do the right thing. It can also hit\
+          <span class="highlight">lower-income drivers</span> harder, since older cars are more likely to draw attention and fines.\
+        </p>\
+      </div>\
+\
+      <div class="card">\
+        <div class="pill">Why it matters</div>\
+        <h3>Trust, fairness, and clarity.</h3>\
+        <p>\
+          When laws aren\'92t communicated clearly\'97or enforced consistently\'97people start to lose trust in the system. Tickets feel random.\
+          Interactions feel one-sided. Young drivers learn to be anxious instead of informed.\
+        </p>\
+        <br />\
+        <p>\
+          This project argues for <span class="highlight">transparent information, consistent standards, and clear communication</span>\
+          so that everyone knows the rules\'97and has a fair shot at following them.\
+        </p>\
+      </div>\
+    </div>\
+  </section>\
+\
+  <!-- Know Your Rights -->\
+  <section id="rights">\
+    <div class="section-header">\
+      <div>\
+        <div class="section-kicker">Know Your Rights</div>\
+        <h2 class="section-title">Read the law. Ask questions. Stay informed.</h2>\
+      </div>\
+      <p class="section-subtitle">\
+        This is not legal advice, but it\'92s a starting point for learning how traffic stops and citations are supposed to work.\
+        Always verify details on official government websites.\
+      </p>\
+    </div>\
+\
+    <div class="grid-2 container">\
+      <div class="card">\
+        <h3>Before you\'92re on the road</h3>\
+        <ul>\
+          <li>Check your vehicle against basic rules: tint, plate visibility, lights, exhaust, registration, and insurance.</li>\
+          <li>Read the actual California Vehicle Code sections for tint and equipment if possible.</li>\
+          <li>Keep digital or printed copies of key documents (license, registration, insurance) organized and accessible.</li>\
+        </ul>\
+      </div>\
+\
+      <div class="card">\
+        <h3>During a traffic stop</h3>\
+        <ul>\
+          <li>Stay calm, keep your hands visible, and follow basic safety instructions.</li>\
+          <li>You can politely ask <span class="highlight">which specific law or Vehicle Code section</span> you are being cited for.</li>\
+          <li>For things like tint, you can respectfully ask whether the tint has been measured with a device.</li>\
+          <li>If you disagree with a citation, you have the option to contest it in court.</li>\
+        </ul>\
+      </div>\
+    </div>\
+  </section>\
+\
+  <!-- Take Action -->\
+  <section id="action">\
+    <div class="section-header">\
+      <div>\
+        <div class="section-kicker">Take Action</div>\
+        <h2 class="section-title">What you can do right now.</h2>\
+      </div>\
+      <p class="section-subtitle">\
+        Awareness is the first step. The next step is using your voice\'97respectfully and strategically\'97to push for clearer, fairer enforcement in San Mateo County.\
+      </p>\
+    </div>\
+\
+    <div class="container grid-2">\
+      <div class="card action-steps">\
+        <div class="pill">For students & young drivers</div>\
+        <h3>1. Learn & share.</h3>\
+        <ol>\
+          <li>Share this site or a summary of the project with friends who drive in the county.</li>\
+          <li>Talk with classmates about their experiences with vehicle stops and tickets.</li>\
+          <li>Bring this topic into class discussions about local government or public policy.</li>\
+        </ol>\
+\
+        <h3 style="margin-top: 1rem;">2. Document your experience.</h3>\
+        <ol>\
+          <li>Write down details after any traffic stop: date, time, location, reason, and outcome.</li>\
+          <li>Keep records of citations, warnings, and any follow-up court experiences.</li>\
+        </ol>\
+      </div>\
+\
+      <div class="card action-steps">\
+        <div class="pill">For civic engagement</div>\
+        <h3>3. Contact local officials.</h3>\
+        <ol>\
+          <li>Politely email or write to San Mateo County Supervisors or city council members.</li>\
+          <li>Explain how inconsistent enforcement affects you and ask for more <span class="highlight">transparent, standardized guidelines</span>.</li>\
+        </ol>\
+\
+        <h3 style="margin-top: 1rem;">4. Support policies that bring clarity.</h3>\
+        <ol>\
+          <li>Ask your school or local organizations to host info sessions about vehicle laws.</li>\
+          <li>Support measures that create public, youth-friendly explanations of local enforcement practices.</li>\
+        </ol>\
+      </div>\
+    </div>\
+  </section>\
+\
+  <!-- Resources -->\
+  <section id="resources">\
+    <div class="section-header">\
+      <div>\
+        <div class="section-kicker">Resources</div>\
+        <h2 class="section-title">Learn the rules from the source.</h2>\
+      </div>\
+      <p class="section-subtitle">\
+        Always double-check details on official sites. Laws and policies can change over time.\
+      </p>\
+    </div>\
+\
+    <div class="container grid-2">\
+      <div class="card resource-list">\
+        <h3>Official information</h3>\
+        <br />\
+        <a href="https://codes.findlaw.com/ca/vehicle-code/veh-sect-26708/" target="_blank" rel="noopener noreferrer">\
+          California Vehicle Code \'96 Tint & Safety (\'a7 26708)\
+        </a>\
+        <a href="https://www.baaqmd.gov/publications/annual-reports" target="_blank" rel="noopener noreferrer">\
+          Bay Area Air Quality Management District \'96 Annual Reports\
+        </a>\
+        <a href="https://www.smcgov.org/departments/public-safety" target="_blank" rel="noopener noreferrer">\
+          San Mateo County \'96 Public Safety & Enforcement\
+        </a>\
+      </div>\
+\
+      <div class="card">\
+        <h3>About this project</h3>\
+        <br />\
+        <p style="font-size:0.9rem;">\
+          This site is part of a student public policy proposal focused on <span class="highlight">driver transparency\
+          and fair enforcement</span> in San Mateo County. It is not official legal advice, but a starting point for\
+          conversation, learning, and civic engagement.\
+        </p>\
+        <br />\
+        <p style="font-size:0.85rem; color:#bbbbbb;">\
+          Questions or feedback?<br />\
+          <!-- Replace this email with a real or school-safe one if you want -->\
+          Email: <a href="mailto:your.email@example.com">your.email@example.com</a>\
+        </p>\
+      </div>\
+    </div>\
+  </section>\
+\
+  <!-- Footer -->\
+  <footer>\
+    <div class="footer-inner">\
+      <div>\
+        <div class="footer-brand">Fair Roads // San Mateo</div>\
+        <div style="margin-top:0.4rem;">\
+          A student-led awareness and policy project for young drivers in San Mateo County.\
+        </div>\
+      </div>\
+      <div class="footer-links">\
+        <!-- Replace these with actual socials if you want -->\
+        <a href="#hero">Back to top</a>\
+        <a href="https://scholar.google.com/scholar?q=procedural+justice+police" target="_blank" rel="noopener noreferrer">\
+          Read the research\
+        </a>\
+      </div>\
+    </div>\
+  </footer>\
+</body>\
+</html>\
+}
